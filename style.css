@@ -1,0 +1,157 @@
+/* DESIGN SYSTEM
+
+--01--COLORS (Colors used throughout the project) */
+:root {
+  --cream: #f2eae2;
+  --white: #fff;
+  --auro: #6c7289;
+  --deep-aqua: #3d8168;
+  --deeper-aqua: #1a4032;
+  --gun-metal: #1c232b;
+}
+
+/*
+--02--TYPOGRAPHY (Font Family: Montserrat, Fraunces)
+These are the fonts used in the design.
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML & Body Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--cream);
+}
+
+/* Product Container Styles */
+.product-container {
+  display: flex;
+  max-width: 60rem;
+  margin: 1.6rem;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Text Box and Image Box Styles */
+.product-text-box {
+  max-width: 50%;
+  padding: 3.2rem;
+  background-color: var(--white);
+}
+
+.product-img-box {
+  max-width: 50%;
+}
+
+/* Product Image Styles */
+.product-img-desktop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-img-mobile {
+  width: 100%;
+}
+
+/* Product Text Styles */
+.product-category {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: var(--auro);
+}
+
+.heading-one {
+  margin-bottom: 2.4rem;
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--gun-metal);
+}
+
+.product-description {
+  margin-bottom: 2.9rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 23px;
+  color: var(--auro);
+}
+
+/* Product Price Styles */
+.product-prices {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  margin-bottom: 3rem;
+}
+
+.product-sale-price {
+  font-size: 3.2rem;
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: var(--deep-aqua);
+}
+
+.product-regular-price {
+  font-size: 1.3rem;
+  text-decoration: line-through;
+  color: var(--auro);
+}
+
+/* Add to Cart Button Styles */
+.add-to-cart:visited,
+.add-to-cart:link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1.5rem 6.3rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--deep-aqua);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover,
+.add-to-cart:active {
+  background-color: var(--deeper-aqua);
+}
+
+.btn-icon {
+  margin-right: 10px;
+}
+
+/* Media Queries for Mobile Styles */
+@media (max-width: 656px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-img-box {
+    max-width: 100%;
+  }
+
+  .product-text-box {
+    max-width: 100%;
+  }
+}
